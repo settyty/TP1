@@ -26,5 +26,11 @@
     <ClInclude Include="lib.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="Keeper.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Ship.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
