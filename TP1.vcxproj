@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sailboat.cpp" />
     <ClCompile Include="Submarine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Keeper.h" />
     <ClInclude Include="lib.h" />
+    <ClInclude Include="Sailboat.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="Submarine.h" />
   </ItemGroup>
