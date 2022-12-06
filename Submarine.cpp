@@ -42,31 +42,31 @@ bool Submarine::SameSpeed(string SS_ch) {
 void Submarine::show()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Ship: Submarine" << endl;
-	cout << "Length: " << length << endl;
-	cout << "Width: " << width << endl;
-	cout << "Amount of crew: " << crew << endl;
-	cout << "Max time under water (days): " << time << endl;
-	cout << "Armament: " << armament << endl;
-	cout << "Speed: " << speed << endl;
+	cout << "Корабль: Подводная лодка" << endl;
+	cout << "Длина: " << length << endl;
+	cout << "Ширина: " << width << endl;
+	cout << "Количество членов экипажа: " << crew << endl;
+	cout << "Максимальное время пребывания под водой (дни): " << time << endl;
+	cout << "Вооружение: " << armament << endl;
+	cout << "Скорость: " << speed << endl;
 	cout << "------------------------------------" << endl;
 }
 void Submarine::rewrite()
 {
 	cout << "------------------------------------" << endl;
 	cin.ignore(32767, '\n');
-	cout << "Ship: Submarine" << endl;
-	cout << "Enter the new length: ";
+	cout << "Корабль: Подводная лодка" << endl;
+	cout << "Введите новую длину: ";
 	getline(cin, length);
-	cout << "Enter the new width: ";
+	cout << "Введите новую ширину: ";
 	getline(cin, width);
-	cout << "Enter the new amount of crew: ";
+	cout << "Введите новое количество членов экипажа: ";
 	getline(cin, crew);
-	cout << "Enter the new max time under water (days): ";
+	cout << "Введите новое максимальное время пребывания под водой (дни): ";
 	getline(cin, time);
-	cout << "Enter the new armament: ";
+	cout << "Введите новое вооружение: ";
 	getline(cin, armament);
-	cout << "Enter the new speed: ";
+	cout << "Введите новую скорость: ";
 	getline(cin, speed);
 	cout << "------------------------------------" << endl;
 }
@@ -77,7 +77,7 @@ void Submarine::saving()
 	outfile.open(initfile, ios_base::app);
 	if (!outfile)
 	{
-		throw "Error!";
+		throw "Ошибка!";
 		system("pause");
 		exit(1);
 	}
@@ -112,7 +112,7 @@ void Submarine::redact_str(int num_str, string red_str)
 		this->speed = red_str;
 		break;
 	default:
-		throw "Error of the menu item!";
+		throw "Ошибка пункта меню!";
 		break;
 	}
 }

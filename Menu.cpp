@@ -52,15 +52,15 @@ int Menu::show_options()
 {
 	int c1;
 	system("cls");
-	cout << "\nSelect the menu item" << endl;
-	cout << "1 - Show all" << endl;
-	cout << "2 - Edit" << endl;
-	cout << "3 - Add" << endl;
-	cout << "4 - Save to the file" << endl;
-	cout << "5 - Load from the file" << endl;
-	cout << "6 - Delete" << endl;
-	cout << "7 - Search ships with equal speed" << endl;
-	cout << "0 - Exit" << endl;
+	cout << "\nВыберите пункт меню" << endl;
+	cout << "1 - Показать все" << endl;
+	cout << "2 - Редактировать" << endl;
+	cout << "3 - Добавить" << endl;
+	cout << "4 - Сохранить в файл" << endl;
+	cout << "5 - Загрузка из файла" << endl;
+	cout << "6 - Удалить" << endl;
+	cout << "7 - Поиск кораблей с одинаковой скоростью" << endl;
+	cout << "0 - Выход" << endl;
 	cout << "-> ";
 	cin >> c1;
 	return c1;
@@ -72,7 +72,7 @@ void Menu::show_all_Ships()
 	{
 		if (list.get_size() == 0)
 		{
-			throw "There's no ships";
+			throw "Там нет кораблей";
 		}
 		for (int i = 0; i < list.get_size(); i++)
 		{
@@ -90,18 +90,18 @@ void Menu::change_data()
 	system("cls");
 	try
 	{
-		cout << "What do you want to edit? " << list.get_size() << endl;
+		cout << "Что вы хотите отредактировать? " << list.get_size() << endl;
 		cin >> c2;
 		if ((c2 < 1) || (c2 > list.get_size()))
 		{
-			throw "Error!";
+			throw "Ошибка!";
 		}
 		list[c2 - 1]->show();
-		cout << "What string do you want to edit?" << endl;
+		cout << "Какую строку вы хотите отредактировать?" << endl;
 		cout << "-> ";
 		cin >> c3;
 		cin.ignore(32767, '\n');
-		cout << "What do you want to enter here?" << endl;
+		cout << "Что вы хотите здесь ввести?" << endl;
 		cout << "-> ";
 		if (c3 == 5)
 		{
@@ -116,7 +116,7 @@ void Menu::change_data()
 				}
 				catch (...)
 				{
-					cout << "Enter the number" << endl;
+					cout << "Введите номер" << endl;
 				}
 			}
 			list[c2 - 1]->redact_str(c3, redact);
@@ -125,7 +125,7 @@ void Menu::change_data()
 		{
 			getline(cin, redact);
 			list[c2 - 1]->redact_str(c3, redact);
-			cout << "Edited" << endl;
+			cout << "Отредактированный" << endl;
 		}
 	}
 	catch (const char* ex) { cout << ex << endl; }
@@ -135,11 +135,11 @@ void Menu::add_new()
 {
 	int c2;
 	system("cls");
-	cout << "\nWhat ship do you want to add?" << endl;
-	cout << "1 - Submarine" << endl;
-	cout << "2 - Sailboat" << endl;
-	cout << "3 - Speedboat" << endl;
-	cout << "0 - Cancel" << endl;
+	cout << "\nКакой корабль вы хотите добавить?" << endl;
+	cout << "1 - Подводная лодка" << endl;
+	cout << "2 - Парусная лодка" << endl;
+	cout << "3 - Скоростной катер" << endl;
+	cout << "0 - Отменить" << endl;
 	cout << "-> ";
 	cin >> c2;
 	switch (c2)
@@ -150,7 +150,7 @@ void Menu::add_new()
 		Ships = sub;
 		sub->rewrite();
 		list.insert(Ships);
-		cout << "She has been added" << endl;
+		cout << "Она была добавлена" << endl;
 		break;
 	case 2:
 		Sailboat * sail;
@@ -158,7 +158,7 @@ void Menu::add_new()
 		Ships = sail;
 		sail->rewrite();
 		list.insert(Ships);
-		cout << "She has been added" << endl;
+		cout << "Она была добавлена" << endl;
 		break;
 	case 3:
 		Speedboat * speedB;
@@ -166,7 +166,7 @@ void Menu::add_new()
 		Ships = speedB;
 		speedB->rewrite();
 		list.insert(Ships);
-		cout << "She has been added" << endl;
+		cout << "Она была добавлена" << endl;
 		break;
 	default:
 		break;
@@ -180,10 +180,10 @@ void Menu::save_to_file()
 	{
 		if (list.get_size() == 0)
 		{
-			throw "There's nothing to save";
+			throw "Нечего сохранять";
 		}
 		list.save();
-		cout << "It has been saved" << endl;
+		cout << "Он был сохранен" << endl;
 	}
 	catch (const char* ex) { cout << ex << endl; }
 	system("pause");
@@ -194,7 +194,7 @@ void Menu::load_from_file()
 	try
 	{
 		list.load();
-		cout << "It has been downloaded" << endl;
+		cout << "Он был загружен" << endl;
 	}
 	catch (const char* ex) { cout << ex << endl; }
 }
@@ -202,7 +202,7 @@ void Menu::delete_Ship()
 {
 	int c2;
 	system("cls");
-	cout << "What do you want to delete? " << list.get_size() << endl;
+	cout << "Что вы хотите удалить? " << list.get_size() << endl;
 	for (int i = 0; i < list.get_size(); i++)
 	{
 		cout << "_" << endl;
@@ -215,7 +215,7 @@ void Menu::delete_Ship()
 	try {
 		if ((c2 < 1) || (c2 > list.get_size()))
 		{
-			throw "Invalid number";
+			throw "Недопустимый номер";
 		}
 		list.remove(c2 - 1);
 		cout << "Wasted" << endl;

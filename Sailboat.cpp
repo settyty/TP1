@@ -41,31 +41,31 @@ bool Sailboat::SameSpeed(string SS_ch) {
 void Sailboat::show()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Ship: Sailboat" << endl;
-	cout << "Name: " << name << endl;
-	cout << "Type: " << type << endl;
-	cout << "Purpose (mil or civil): " << purpose << endl;
-	cout << "Length:" << length << endl;
-	cout << "Amount of crew: " << crew << endl;
-	cout << "Speed: " << speed << endl;
+	cout << "Корабль: Парусная лодка" << endl;
+	cout << "Имя: " << name << endl;
+	cout << "Тип: " << type << endl;
+	cout << "Назначение (военное или гражданское): " << purpose << endl;
+	cout << "Длина:" << length << endl;
+	cout << "Количество членов экипажа: " << crew << endl;
+	cout << "Скорость: " << speed << endl;
 	cout << "------------------------------------" << endl;
 }
 void Sailboat::rewrite()
 {
 	cout << "------------------------------------" << endl;
 	cin.ignore(32767, '\n');
-	cout << "Ship: Sailboat" << endl;
-	cout << "Enter the new name: ";
+	cout << "Корабль: Парусная лодка" << endl;
+	cout << "Введите новое имя: ";
 	getline(cin, name);
-	cout << "Enter the new type: ";
+	cout << "Введите новый тип: ";
 	getline(cin, type);
-	cout << "Enter the new purpose (mil or civil): ";
+	cout << "Введите новое названчение (военное или гражданское): ";
 	getline(cin, purpose);
-	cout << "Enter the new length: ";
+	cout << "Введите новую длину: ";
 	getline(cin, length);
-	cout << "Enter the new amount of crew: ";
+	cout << "Введите новое количество членов экипажа: ";
 	getline(cin, crew);
-	cout << "Enter the new speed: ";
+	cout << "Введите новую скорость: ";
 	getline(cin, speed);
 	cout << "------------------------------------" << endl;
 }

@@ -35,25 +35,25 @@ bool Speedboat::SameSpeed(string SS_ch) {
 void Speedboat::show()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Ship: Speedboat" << endl;
-	cout << "Capacity: " << capacity << endl;
-	cout << "Material: " << material << endl;
-	cout << "Purpose: " << purpose << endl;
-	cout << "Speed: " << speed << endl;
+	cout << "Корабль: Скоростной катер" << endl;
+	cout << "Вместимость: " << capacity << endl;
+	cout << "Материал: " << material << endl;
+	cout << "Цель: " << purpose << endl;
+	cout << "Скорость: " << speed << endl;
 	cout << "------------------------------------" << endl;
 }
 void Speedboat::rewrite()
 {
 	cout << "------------------------------------" << endl;
 	cin.ignore(32767, '\n');
-	cout << "Ship: Speedboat" << endl;
-	cout << "Enter the new capacity: ";
+	cout << "Корабль: Скоростной катер" << endl;
+	cout << "Введите новую вместимость: ";
 	getline(cin, capacity);
-	cout << "Enter the new material: ";
+	cout << "Введите новый материал: ";
 	getline(cin, material);
-	cout << "Enter the new purpose: ";
+	cout << "Введите новую цель: ";
 	getline(cin, purpose);
-	cout << "Enter the new speed: ";
+	cout << "Введите новую скорость: ";
 	getline(cin, speed);
 	cout << "------------------------------------" << endl;
 }
