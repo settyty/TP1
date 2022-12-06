@@ -130,6 +130,7 @@
     <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Sailboat.cpp" />
+    <ClCompile Include="Speedboat.cpp" />
     <ClCompile Include="Submarine.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +138,7 @@
     <ClInclude Include="lib.h" />
     <ClInclude Include="Sailboat.h" />
     <ClInclude Include="Ship.h" />
+    <ClInclude Include="Speedboat.h" />
     <ClInclude Include="Submarine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
