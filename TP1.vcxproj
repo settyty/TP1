@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Sailboat.cpp" />
     <ClCompile Include="Speedboat.cpp" />
     <ClCompile Include="Submarine.cpp" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Keeper.h" />
     <ClInclude Include="lib.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Sailboat.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="Speedboat.h" />
